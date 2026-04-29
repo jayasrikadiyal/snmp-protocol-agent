@@ -58,7 +58,7 @@ int get_dm_value(const char *param, char *val, size_t len)
     
     //Get Destination component 
     if(!Cosa_FindDestComp((char *)param, &ppDestComponentName, &ppDestPath)){
-        AnscTraceWarning(("Failed to find the CCSP component who supports '%s'\n", param));
+        AnscTraceDebug(("Failed to find the CCSP component who supports '%s'\n", param));
         goto get_negative_result;
     }
     
@@ -111,7 +111,7 @@ int set_dm_value(const char *param, char *val, size_t vlen)
     }
     
     if (!Cosa_FindDestComp((char *)param, &ppDestComponentName, &ppDestPath)){
-        AnscTraceWarning(("Failed to find the CCSP component who supports '%s'\n", param));
+        AnscTraceDebug(("Failed to find the CCSP component who supports '%s'\n", param));
 
         goto set_negative_result;
     }

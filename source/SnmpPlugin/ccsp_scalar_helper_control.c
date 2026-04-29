@@ -444,7 +444,7 @@ CcspScalarHelperRegisterMibHandler
                  mibHandler
                 );
 
-            AnscTraceInfo(("Register Cache handler successfully.\n"));
+            AnscTraceDebug(("Register Cache handler successfully.\n"));
         }
         entry = AnscQueueGetNextEntry(entry);
     }
