@@ -72,6 +72,11 @@
 #include "ccsp_message_bus.h"
 #include "ccsp_base_api.h"
 
+//#ifdef AnscTraceDebug
+#undef AnscTraceDebug
+#define AnscTraceDebug(a) printf("%s:%d> ", __FUNCTION__, __LINE__); printf a
+////#endif
+
 /* Init and Exit functions for SnmpAgent PA */
 BOOL Cosa_Init ();
 BOOL Cosa_Shutdown();

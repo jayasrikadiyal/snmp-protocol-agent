@@ -124,6 +124,11 @@
 #define CCSP_XML_IndexMap_dm                           "dm"
 #define CCSP_XML_IndexMap_subDm                        "mapToSubDM"
 
+//#ifdef AnscTraceDebug
+#undef AnscTraceDebug
+#define AnscTraceDebug(a) printf("%s:%d> ", __FUNCTION__, __LINE__); printf a
+////#endif
+
 /***********************************************************
         FUNCTIONS IMPLEMENTED IN CCSP_MIB_UTILITIES.C
 ***********************************************************/
